@@ -1,5 +1,4 @@
 import React, { useEffect, useContext } from 'react'
-
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Pessoas from '../components/pessoas';
@@ -7,7 +6,7 @@ import Profile from '../components/profile';
 import ListaPessoas from '../components/listaPessoas';
 import Aside from '../components/aside';
 import { UserContext } from '../context/userContext';
-
+import './main.css'
 
 
 function Main(){

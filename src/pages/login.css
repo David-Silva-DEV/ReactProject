@@ -1,7 +1,7 @@
-body{
+.body{
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 #lb-login{
@@ -24,13 +24,13 @@ body{
 
 #ip-login{
     display: flex;
-    justify-content: ;
+    justify-content: center;
     background-color: rgb(122, 122, 122);
     border-radius: 5px;
 }
 #ip-password{
     display: flex;
-    justify-content: ;
+    justify-content: center;
     background-color: rgb(122, 122, 122);
     border-radius: 5px;
 }
