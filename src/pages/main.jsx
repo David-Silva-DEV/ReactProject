@@ -1,46 +1,36 @@
 import React, { useEffect, useContext } from 'react'
-import Header from '../components/header';
-import Footer from '../components/footer';
-import Pessoas from '../components/pessoas';
-import Profile from '../components/profile';
-import ListaPessoas from '../components/listaPessoas';
-import Aside from '../components/aside';
-import { UserContext } from '../context/userContext';
 import './main.css'
+import Footer from '../components/footer'
+import Header from '../components/header'
+import { UserContext } from '../context/userContext'
+import Profile from '../didatico/aula2/aula2'
+import ExemploComponente from '../didatico/aula3/exemploComponente'
+import LoginForm from '../components/loginform'
 
+function Main() {
+	const {pessoas, setPessoas} = useContext(UserContext)
 
-function Main(){
-   const {pessoas, setPessoas} = useContext(UserContext)
-    
-    useEffect(() => { 
-		const fetchUsers = async () => {
-			const response = await fetch('/pessoas.json');
-				const data = await response.json();
-			  	setPessoas(data);
-		  };
-		fetchUsers();
-		}, [])
-   
-   
-   
-   
-    return(
-        <div>
-           <Header/>
-           <Aside/>
-           <div className='main-content'>
-                <h1> Some Stuff </h1>
-                <Pessoas pessoas={pessoas}/>
-                <Profile name={'David'} lastname={'Silva'} age={41}/> {/*Se não passar o valor de age, a página irá renderizar a mensagem 'Erro, não conseguiu ler a idade' */}
-                <ListaPessoas name={'Fábio'} lastname={'Souza'} profession={'Designer'} age={'36'}/>
+	// useEffect(() => { 
+	// 	const fetchUsers = async () => {
+	// 		const response = await fetch('/pessoas.json')
+	// 			const data = await response.json();
+	// 		  	setPessoas(data);
+	// 	  };
+	// 	fetchUsers();
+	// 	}, [])
 
-           </div>
-           
-           
-           <Footer/> 
-        </div>
-    )
+		
 
+	return(
+		<div>
+			<Header/>
+			<div className='main-content'>
+				<LoginForm />
+				<Footer className={'footer'}/>
+			</div>
+		</div>
+	)
 }
 
-export default Main
+
+export default  Main 

@@ -1,5 +1,11 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(192, 192, 192);
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    align-items: center;
+    height: 100vh;
+}
+
+.footer {
+    bottom: 0;
 }

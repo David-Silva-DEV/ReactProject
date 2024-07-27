@@ -1,32 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-import Projeto from './pages/projeto';
-import Footer from './components/footer';
-import Header from './components/header'
-import Main from './pages/main';
-import Hero from './pages/hero';
 import { UserProvider } from './context/userContext';
-import{ BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './pages/login';
-
-
+import Main from './pages/main'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Register from './pages/register';
+import About from './pages/about';
+import Hero from './pages/hero';
 
 
 function App() {
+  
   return (
     <BrowserRouter>
-       <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/hero" element={<Hero />} />
-          <Route path="/main" element={<Main />} />
-          <Route path="/main" element={<Main />} />
-        </Routes>
-    </BrowserRouter>
-      
-  );
+      <Routes>
+        <Route path='/' element={<Main />}  />
+        <Route path='/hero' element={ <Hero />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </BrowserRouter>  
+   );
 }
-
-
 
 
 function AppWrapper() {
@@ -37,5 +30,3 @@ function AppWrapper() {
   );
 }
 export default AppWrapper;
-
-

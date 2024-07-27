@@ -1,13 +1,12 @@
-import React  from "react";
+import React from "react";
 
 
 function Pessoas({pessoas}){
-    
-  
+
     return (
-        pessoas.map((element) =>{
+        pessoas.map((element, index) =>{
             return (<ul>
-                <li>Nome: {element['nome']}</li>
+                <li key={index}>Nome: {element['nome']}</li>
                 <li>Sobrenome: {element['sobrenome']}</li>
                 <li>Idade: {element['idade']}</li>
                 <li>Profissão: {element['profissao']}</li>

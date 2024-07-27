@@ -6,9 +6,23 @@ const UserContext = createContext(null);
 const UserProvider = ({ children }) => {
   const [pessoas, setPessoas] = useState([]);
   const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState('')
+  const [searchByCategory, setSearchByCategory] = useState(null)
+
+
+  const values = { 
+    pessoas,
+    setPessoas,
+    loading,
+    setLoading,
+    user,
+    setUser,
+    searchByCategory,
+    setSearchByCategory,
+  }
 
   return (
-    <UserContext.Provider value={{ pessoas, setPessoas, loading, setLoading }}>
+    <UserContext.Provider value={values}>
       {children}
     </UserContext.Provider>
   );
